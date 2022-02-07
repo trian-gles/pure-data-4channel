@@ -1,0 +1,28 @@
+#N canvas 515 477 450 300 12;
+#X obj 191 8 noise~;
+#X obj 153 239 dac~ 1 2 3 4;
+#X obj 193 35 *~ 0.05;
+#X obj 159 114 4ch-pan;
+#X obj 222 58 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 325 111 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 324 136 openpanel;
+#X obj 37 120 readsf~;
+#X msg 15 47 open harpsichord.wav;
+#X msg 56 94 1;
+#X msg 94 96 0;
+#X obj 155 169 4chan-rev;
+#X connect 0 0 2 0;
+#X connect 3 0 11 0;
+#X connect 3 1 11 1;
+#X connect 3 2 11 2;
+#X connect 3 3 11 3;
+#X connect 4 0 3 1;
+#X connect 7 0 3 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 11 0 1 0;
+#X connect 11 1 1 1;
+#X connect 11 2 1 2;
+#X connect 11 3 1 3;
